@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<!-- Basic Page Needs
+      ================================================== -->
+	<meta charset="utf-8">
+	<title>Home Watch USA - Terms of Service </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900" rel="stylesheet">
+	<!-- CSS
+      ================================================== -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="assets/css/icon-font.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '894727');
+</script>
+<!-- End MailerLite Universal -->
+
+   <script src="https://unpkg.com/vue@3"></script> 
+</head>
+
+<body>
+
+	<!-- Wrapper -->
+	
+
+
+
+	<div id="app">
+<div id="wrapper">
+		<header class="header-global">
+			<nav id="navbar-main" class="navbar navbar-main fixed-top navbar-expand-lg navbar-transparent navbar-light headroom">
+				<div class="container">
+					<div class="logo-top">
+				<a href="/">
+	<img src="assets/images/logo-icon.png" class="img-fluid" alt="map marker">
+	<span class="companyName">
+		<i>Home Watch USA</i>
+	</span>
+</a>
+					</div>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+					<div class="navbar-collapse collapse" id="navbar_global">
+						<div class="navbar-collapse-header">
+							<div class="row">
+								<div class="col-6 collapse-brand">
+									<div class="logo-top">
+								<a href="/" class="linkWhite">
+	<img src="assets/images/logo-icon.png" class="img-fluid" alt="map marker">
+	<span class="companyNameMobile">
+		<i>Home Watch USA</i>
+	</span>
+</a>
+		
+									</div>
+								</div>
+								<div class="col-6 collapse-close">
+									<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                           <span></span>
+                           <span></span>
+                           </button>
+								</div>
+							</div>
+						</div>
+						<div class="navbar-nav navbar-nav-hover align-items-lg-center ml-auto">
+							<nav id="navigation" class="style-1">
+								<ul id="responsive">
+									<li>
+										<a class="current" href="/">Home</a>
+										
+									</li>
+								
+								
+									<li><a href="blog-list.html">Blog</a>
+										
+									</li>
+								
+								</ul>
+							</nav>
+							<div class="header-widget">
+								<a class="btn btn-neutral btn-icon btn-radius" href="add-listing.html">Add Listing <i class="fa fa-plus"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+	
+
+<div class="main-wrapper">
+			<div id="titlebar" class="titlebar-about gradient">
+				<div class="title-bar-inner">
+					<div class="container">
+						<div class="row ">
+							<div class="col-md-12">
+								<h1>PRACTICING WITH VUE JS</h1>
+								<span>Home Watch USA</span>
+								<!-- Breadcrumbs -->
+								<nav id="breadcrumbs">
+									<ul>
+										<li><a>Home</a></li>
+										<li>Terms of Service</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="title-overlay"></div>
+			</div>
+			
+			
+					
+					<div class="block-space bg-secondary">
+						<div class="container">
+							<div class="row row-grid align-items-center">
+								
+								<div class="col-md-12">
+									<div class="pl-md-5">
+							
+	<h2>Home Watch Companies</h2>
+	<p>Please see the list below of available Home Watch Companies in your area.</p>
+<app-button>GO</app-button>
+
+
+
+	<div v-for="business in locations.filter(a => a.complete)" :key="business.id">
+	<div class="row">
+								<!-- Listing Item -->
+								<div class="col-lg-12 col-md-12 mb-5">
+									<div class="listing-item-container list-layout">
+										<div class="listing-item">
+											<!-- Image -->
+											<div class="listing-item-image">
+												<img src="assets/images/homewatchcompany-locationpin.jpg" class="pindrop" alt="location of Home Watch Company" >
+											</div>
+											<!-- Content -->
+											<div class="listing-item-content">
+												<span class="badge badge-pill list-banner badge-primary text-uppercase"> {{business.association}}</span>
+												<div class="listing-item-inner">
+												  <h3 class="locationInfo">{{business.name}}</h3>
+													<div class="address-bar">{{business.city}}, {{business.state}}<br />
+	      											 {{business.contactName}}<br /> {{business.phoneNumber}}<br /> </div>
+													
+												</div>
+												<!--span class="round-pill like-banner d-block bg-primary"><i class="fa fa-heart-o"></i></!--span-->
+											</div>
+										</div>
+									</div>
+								</div>
+							<!-- Listing Item / End -->
+						
+
+	</div>
+	<!--FILTERED SECTIONS AFTER DROPDOWN HAS BEEN SELECTED AND BUTTON PRESSED-->
+	FILTERED LIST:
+	     <!-- Listing Item -->
+			<div class="col-lg-12 col-md-12 mb-5">
+									<div class="listing-item-container list-layout">
+										<div class="listing-item">
+											<!-- Image -->
+											<div class="listing-item-image">
+												<img src="assets/images/homewatchcompany-locationpin.jpg" class="pindrop" alt="location of Home Watch Company" >
+											</div>
+											<!-- Content -->
+											<div class="listing-item-content">
+												<span class="badge badge-pill list-banner badge-primary text-uppercase"> {{business.association}}</span>
+												<div class="listing-item-inner">
+												  <h3 class="locationInfo">{{business.name}}</h3>
+													<div class="address-bar">{{business.city}}, {{business.state}}<br />
+	      											 {{business.contactName}}<br /> {{business.phoneNumber}}<br /> </div>
+													
+												</div>
+												<!--span class="round-pill like-banner d-block bg-primary"><i class="fa fa-heart-o"></i></!--span-->
+											</div>
+										</div>
+									</div>
+			</div>
+		 <!-- Listing Item / End -->
+
+
+	</div>
+
+<!--END OF YOUR VUE-->
+
+    </div>
+	</div>
+	</div>
+	</div>
+	</div>
+</div>
+
+
+
+</div><!--end of divapp-->
+
+
+
+<!--FOOTER-->	
+		<div id="footer" class="sticky-footer bg-primary">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5 col-sm-6">
+
+<div class="logo-top">
+					
+<a href="/">
+	<img src="assets/images/logo-icon.png" class="img-fluid" alt="map marker">
+	<span class="companyName">
+		<i>Home Watch USA</i>
+	</span>
+</a>
+
+					</div>
+
+					
+					
+					</div>
+					<div class="col-md-4 col-sm-6 ">
+						<ul class="footer-links">
+							<li><a class="text-white" href="privacy.html">Privacy Policy</a></li>
+							<li><a class="text-white" href="terms.html">Terms of Service</a></li>
+				
+						</ul>
+					</div>
+					<div class="col-md-3  col-sm-12">
+						<ul class="footer-links">
+							<li><a class="text-white" href="about.html">About</a></li>
+							<li><a class="text-white" href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- Copyright -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="copyrights text-white">© 2024 Home Watch USA -  All Rights Reserved.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<!--end of FOOTER-->
+
+
+<!-- Wrapper for external JavaScript files-->
+<div> 
+	<!-- Scripts
+      ================================================== -->
+	<script type="text/javascript" src="assets/scripts/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/popper.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/mmenu.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/chosen.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/slick.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/rangeslider.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/magnific-popup.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/waypoints.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/counterup.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/tooltips.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/jquery.countdown.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/bootstrap-datepicker.min.js"></script>
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initAutocomplete"></script> -->
+	<script type="text/javascript" src="assets/scripts/custom.js"></script>
+
+</div>
+
+<!--SCRIPT FOR VUE-->
+<script type="module">
+//import HWUSA-footer from "./components/HWUSA-footer;"
+
+	let app = {
+      data(){
+		return{
+		greeting: "where is your greeting ???????",
+		buttonClasses: 'text-green',
+		locations: [
+				{id: "tx01", name: 'Dallas Home Watch', 	city: 'Dallas',   state: 'Texas', contactName: 'Tina Lawson', phoneNumber:'972-982-7050', websiteURL:'https://dallashomewatch.com', association: 'NHWA', complete: true},
+				{id: "tx02", name: 'Brazos Home Watch',		city: 'Granbury', state: 'Texas', contactName: ' ',           phoneNumber:'817-219-0561', websiteURL:'https://brazoshomewatch.com/', association: 'NHWA', complete: false},
+				{id: "tx03", name: 'Gulf Coast Home Watch', city: 'Galveston', state: 'Texas', contactName: ' ', phoneNumber:'409-750-3178', websiteURL:'https://www.gulfcoasthomewatcher.com', association: 'NHWA', complete: false},
+				{id: "tx04", name: 'Total Home Watch', 		city: 'Montgomery', state: 'Texas', contactName: ' ', phoneNumber:'936-648-7697', websiteURL:'https://totalhomewatch.com/', association: 'NHWA', complete: false},
+				{id: "tx05", name: 'Total Home, LLC', city: 'The Woodlands', state: 'Texas', contactName: 'Ron', phoneNumber:'832-381-6501', websiteURL:'https://totalhm.com', association: 'NHWA', complete: false},
+				{id: "tx06", name: 'Hill Country Home Watch Service', city: 'Jarrell', state: 'Texas', contactName: 'Celeste ', phoneNumber:'512-809-0859', websiteURL:'http://www.hchomewatch.com/', association: 'NHWA', complete: false},
+				{id: "tx07", name: 'LoneStar Home Watch', city: 'Murphy', state: 'Texas', contactName: ' ', phoneNumber:'409-750-3178', websiteURL:'https://lonestarwatch.com', association: 'NHWA', complete: false},
+				{id: "tx08", name: 'East Texas Home Watch', city: 'Athens', state: 'Texas', contactName: ' ', phoneNumber:'409-750-3178', websiteURL:'https://easttexashomewatch.com/', association: 'NHWA', complete: false},
+				] 
+			}
+		},
+		computed: {
+			
+		},
+		components: {
+			'app-button1': {
+					template:`
+					<button class="btn-primary"><slot/></button> 
+					`,
+				},
+				'HWUSA-footer': HWUSA-footer
+			}
+		};
+	Vue.createApp(app).mount('#app');
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

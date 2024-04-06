@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Basic Page Needs
+      ================================================== -->
+	<meta charset="utf-8">
+	<title>Home Watch Companies in Texas</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900" rel="stylesheet">
+	<!-- CSS
+      ================================================== -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="/assets/css/icon-font.css">
+	<link rel="stylesheet" href="/assets/css/bootstrap-datepicker.min.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+        .city {
+            display: none;
+        }
+    </style>
+	   <script src="https://unpkg.com/vue@3"></script> 
+</head>
+
+<div>
+	<div id="app">
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<header class="header-global">
+			<nav id="navbar-main" class="navbar navbar-main fixed-top navbar-expand-lg navbar-transparent navbar-light headroom">
+				<div class="container">
+					<div class="logo-top">
+				<a href="/">
+	<img src="/assets/images/logo-icon.png" class="img-fluid" alt="map marker">
+	<span class="companyName">
+		<i>Home Watch USA</i>
+	</span>
+</a>	</div>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+					<div class="navbar-collapse collapse" id="navbar_global">
+						<div class="navbar-collapse-header">
+							<div class="row">
+								<div class="col-6 collapse-brand">
+									<div class="logo-top">
+								<a href="/" class="linkWhite">
+	<img src="/assets/images/logo-icon.png" class="img-fluid" alt="map marker">
+	<span class="companyNameMobile">
+		<i>Home Watch USA</i>
+	</span>
+</a>
+		
+									</div>
+								</div>
+								<div class="col-6 collapse-close">
+									<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                           <span></span>
+                           <span></span>
+                           </button>
+								</div>
+							</div>
+						</div>
+						<div class="navbar-nav navbar-nav-hover align-items-lg-center ml-auto">
+							<nav id="navigation" class="style-1">
+								<ul id="responsive">
+									<li><a class="current" href="#">Home</a></li>
+								    <li><a href="blog-list.html">Blog</a></li>
+								</ul>
+							</nav>
+							<div class="header-widget">
+								<a class="btn btn-neutral btn-icon btn-radius" href="/about.html#add-listing">Add Listing <i class="fa fa-plus"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div class="main-wrapper">
+			<!--Title Bar -->
+			<div id="titlebar" class="titlebar-texas gradient">
+				<div class="title-bar-inner">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<h1>Texas Home Watch Companies</h1>
+								<span></span>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="title-overlay"></div>
+			</div>
+			<!-- Content -->
+			<div class="content">
+				<div class="container">
+					<div class="row">
+						<!-- Search -->
+						<div class="col-md-12 grid-full-width page-search mb-3">
+							<div class="main-search-input mt-0">
+								
+								
+								<div class="col-lg-6 col-sm-6">
+						<select id="city" name="city" class="custom-select my-1 mr-sm-2 new-select" id="inlineFormCustomSelectPref">
+                           <option value="" disabled selected>Select a city name to narrow your search</option>
+								<option value="Athens">Athens</option>
+								<option value="Dallas">Dallas</option>
+								<option value="Galveston">Galveston</option>
+								<option value="Granbury">Granbury</option>
+								<option value="Jerrell">Jerrell</option>
+								<option value="Montgomery">Montgomery</option>
+								<option value="Murphy">Murphy</option>
+								<option value="The-Woodlands">The Woodlands</option>
+                        </select>
+								</div>
+								<div class="col-lg-6 col-sm-6 text-right">
+									<a class="btn main-search-btn btn-radius btn-lg btn-primary text-white"><span class="btn-inner--text">Search</span></a>
+								</div>
+							</div>
+						</div>
+						<!-- Search Section / End -->
+						<div class="col-md-12">
+						
+<!-- SECTION 1: Sorting - Filtering Section-->
+	<div v-for="business in locations.filter(a => a.complete)" :key="business.id">
+	            <div class="row">
+								<!-- Listing Item -->
+								<div class="col-lg-12 col-md-12 mb-5">
+									<div class="listing-item-container list-layout">
+										<div class="listing-item">
+											<!-- Image -->
+											<div class="listing-item-image">
+												<img src="/assets/images/homewatchcompany-locationpin.jpg" class="pindrop" alt="location of Home Watch Company" >
+											</div>
+											<!-- Content -->
+											<div class="listing-item-content">
+												<span class="badge badge-pill list-banner badge-primary text-uppercase"> {{business.association}}</span>
+												<div class="listing-item-inner">
+												  <h3 class="locationInfo">{{business.name}}</h3>
+													<div class="address-bar">{{business.city}}, {{business.state}}<br />
+	      											 {{business.contactName}}<br /> {{business.phoneNumber}}<br /> </div>
+													<!--div class="mt-3"><span class="badge badge-pill badge-primary text-uppercase badge-cat">Website</span>
+														  <a href="">Website: {{business.websiteURL}}</a></p>    LINK
+														</!--div-->
+												</div>
+												<!--span class="round-pill like-banner d-block bg-primary"><i class="fa fa-heart-o"></i></!--span-->
+											</div>
+										</div>
+									</div>
+								</div>
+							<!--END OF YOUR VUE-->
+								
+								<!-- Listing Item / End -->
+	             </div>
+    </div>
+
+
+
+	FILTERED LIST:
+<!-- SECTION 2: Sorting - Filtering Section-->
+	<div v-for="business in locations.filter(a => !a.complete)" :key="business.id">
+	<!--FILTERED SECTIONS AFTER DROPDOWN HAS BEEN SELECTED AND BUTTON PRESSED-->
+
+	<!-- Listing Item -->
+								<div class="col-lg-12 col-md-12 mb-5">
+									<div class="listing-item-container list-layout">
+										<div class="listing-item">
+											<!-- Image -->
+											<div class="listing-item-image">
+												<img src="/assets/images/homewatchcompany-locationpin.jpg" class="pindrop" alt="location of Home Watch Company" >
+											</div>
+											<!-- Content -->
+											<div class="listing-item-content">
+												<span class="badge badge-pill list-banner badge-primary text-uppercase"> {{business.association}}</span>
+												<div class="listing-item-inner">
+												  <h3 class="locationInfo">{{business.name}}</h3>
+													<div class="address-bar">{{business.city}}, {{business.state}}<br />
+	      											 {{business.contactName}}<br /> {{business.phoneNumber}}<br /> </div>
+													
+												</div>
+												<!--span class="round-pill like-banner d-block bg-primary"><i class="fa fa-heart-o"></i></!--span-->
+											</div>
+										</div>
+									</div>
+								</div>
+							<!-- Listing Item / End -->
+
+    </div>
+
+<!--end of new filtered list-->
+						
+		</div>
+<!--END OF YOUR VUE-->
+
+		</div>
+		</div>
+		</div>
+		</div>
+		</div> <!--end of #app-->
+    </div>
+
+</div>
+
+
+
+
+<!--FOOTER-->	
+		<div id="footer" class="sticky-footer bg-primary">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5 col-sm-6">
+
+<div class="logo-top">
+					
+<a href="/">
+	<img src="/assets/images/logo-icon.png" class="img-fluid" alt="map marker">
+	<span class="companyName">
+		<i>Home Watch USA</i>
+	</span>
+</a>
+
+					</div>
+
+					
+					
+					</div>
+					<div class="col-md-4 col-sm-6 ">
+						<ul class="footer-links">
+							<li><a class="text-white" href="/privacy.html">Privacy Policy</a></li>
+							<li><a class="text-white" href="/terms.html">Terms of Service</a></li>
+				
+						</ul>
+					</div>
+					<div class="col-md-3  col-sm-12">
+						<ul class="footer-links">
+							<li><a class="text-white" href="/about.html">About</a></li>
+							<li><a class="text-white" href="/contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- Copyright -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="copyrights text-white">© 2024 Home Watch USA -  All Rights Reserved.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<!--end of FOOTER-->
+
+<!-- Wrapper for external JavaScript files-->
+<div>
+		<!-- Scripts======= -->
+	<script type="text/javascript" src="assets/scripts/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/popper.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/mmenu.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/chosen.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/slick.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/rangeslider.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/magnific-popup.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/waypoints.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/counterup.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/tooltips.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/jquery.countdown.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/bootstrap-datepicker.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initAutocomplete"></script>
+	<script type="text/javascript" src="assets/scripts/custom.js"></script>
+</div>
+
+
+
+<!--SCRIPT FOR VUE-->
+<script>
+	let app = {
+      data(){
+		return{
+		locations: [
+				{id: "tx01", name: 'Dallas Home Watch', 	city: 'Dallas',   state: 'Texas', contactName: 'Tina Lawson', phoneNumber:'972-982-7050', websiteURL:'https://dallashomewatch.com', association: 'NHWA', complete: false},
+				{id: "tx02", name: 'Brazos Home Watch',		city: 'Granbury', state: 'Texas', contactName: ' ',           phoneNumber:'817-219-0561', websiteURL:'https://brazoshomewatch.com/', association: 'NHWA', complete: true},
+				{id: "tx03", name: 'Gulf Coast Home Watch', city: 'Galveston', state: 'Texas', contactName: ' ', phoneNumber:'409-750-3178', websiteURL:'https://www.gulfcoasthomewatcher.com', association: 'NHWA', complete: false},
+				{id: "tx04", name: 'Total Home Watch', 		city: 'Montgomery', state: 'Texas', contactName: ' ', phoneNumber:'936-648-7697', websiteURL:'https://totalhomewatch.com/', association: 'NHWA', complete: false},
+				{id: "tx05", name: 'Total Home, LLC', city: 'The Woodlands', state: 'Texas', contactName: 'Ron', phoneNumber:'832-381-6501', websiteURL:'https://totalhm.com', association: 'NHWA', complete: false},
+				{id: "tx06", name: 'Hill Country Home Watch Service', city: 'Jarrell', state: 'Texas', contactName: 'Celeste ', phoneNumber:'512-809-0859', websiteURL:'http://www.hchomewatch.com/', association: 'NHWA', complete: false},
+				{id: "tx07", name: 'LoneStar Home Watch', city: 'Murphy', state: 'Texas', contactName: ' ', phoneNumber:'409-750-3178', websiteURL:'https://lonestarwatch.com', association: 'NHWA', complete: false},
+				{id: "tx08", name: 'East Texas Home Watch', city: 'Athens', state: 'Texas', contactName: ' ', phoneNumber:'409-750-3178', websiteURL:'https://easttexashomewatch.com/', association: 'NHWA', complete: false},
+				] 
+			}}
+	};
+	Vue.createApp(app).mount('#app');
+
+
+
+</script>
+
+</body>
+
+</html>
